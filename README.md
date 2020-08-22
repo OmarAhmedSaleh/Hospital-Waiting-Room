@@ -1,4 +1,4 @@
-# Hospital-Wating-Room
+# Hospital-Waiting-Room
 This program is written to help a hospital emergency room keep track of the patient lists in order for appropriate assistance.
 The hospital emergency room prioritizes patients waiting based on the severity of their need. 
 The doctors in would see the next most critical patient rather than the one who arrived first.
