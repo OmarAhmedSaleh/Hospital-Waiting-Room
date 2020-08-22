@@ -49,8 +49,8 @@ public class BinarySearchTreeUI {
 	                    break;
 	                case "3": sortPatients();
 	                    break;
-	                case "4": System.out.print("\nClosing the program!");
-	                    break;
+	                case "4": System.out.print("\nClosing the program!\n\n");
+	                    return;
 	                default:
 	                	System.out.println("invalid input\n");
 	                	break;

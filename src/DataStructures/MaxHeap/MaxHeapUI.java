@@ -51,11 +51,12 @@ public class MaxHeapUI {
             String a = reader.next();
             switch(a){
                 // Case will call to Add new patient
-                case "1": 
+                case "1": Scanner inputName = new Scanner(System.in);
                     System.out.print("Enter patient's name: ");
-                    String name = reader.next();
+                    String name = inputName.next();
+                    Scanner inputPriority = new Scanner(System.in);
                     System.out.print("Assign priority: ");
-                    int priority = reader.nextInt();
+                    int priority = inputPriority.nextInt();
                     addPatient(name,priority);
                     break;
                 case "2": removeMaxPatient();
@@ -64,7 +65,7 @@ public class MaxHeapUI {
                     break;
                 case "4": sortPatients();
                     break;
-                case "5": System.out.print("\nClosing the program!");
+                case "5": System.out.print("\nClosing the program!\n\n");
                     return;
                 default:
                 	System.out.println("invalid input\n");

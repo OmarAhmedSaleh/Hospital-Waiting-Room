@@ -59,8 +59,8 @@ public class HashTableUI {
 	                    break;
 	                case "4": printPatients();
 	                    break;
-	                case "5": System.out.print("\nClosing the program!");
-	                break;
+	                case "5": System.out.print("\nClosing the program!\n\n");
+	                return;
 	                default:
 	                	System.out.println("invalid input\n");
 	                	break;

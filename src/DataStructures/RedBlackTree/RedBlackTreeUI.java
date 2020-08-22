@@ -38,30 +38,34 @@ public class RedBlackTreeUI {
 
     public void UI(Scanner reader){
         while(true){
-            System.out.print("*** Welcome to the CS146 Hospital! ***\nEnter 1 to add a new patient\nEnter 2 to remove a patient by priority number\nEnter 3 to search for a Patient: \nEnter 4 to see sorted patients based on their priority\nEnter 5 to exit the program\n\nYour input is: ");
+            System.out.print("\n\n *** Welcome to the CS146 Hospital! ***\nEnter 1 to add a new patient\nEnter 2 to remove a patient by priority number\nEnter 3 to search for a Patient: \nEnter 4 to see sorted patients based on their priority\nEnter 5 to exit the program\n\nYour input is: ");
             String a = reader.next();
             switch(a){
                 // Case will call to Add new patient
                 case "1":
+                    Scanner inputName = new Scanner(System.in);
                     System.out.print("Enter patient's name: ");
-                    String name = reader.next();
+                    String name = inputName.next();
+                    Scanner inputPriority = new Scanner(System.in);
                     System.out.print("Assign priority: ");
-                    int priority = reader.nextInt();
+                    int priority = inputPriority.nextInt();
                     addPatient(priority,name);
                     break;
                 case "2":
+                    Scanner inputPriorityDelete = new Scanner(System.in);
                     System.out.print("Patient to delete with priority: ");
-                    int priorityDelete = reader.nextInt();
+                    int priorityDelete = inputPriorityDelete.nextInt();
                     removePatient(priorityDelete);
                     break;
                 case "3":
+                    Scanner inputPrioritySearch = new Scanner(System.in);
                     System.out.print("Patient to delete with priority: ");
-                    int prioritySearch = reader.nextInt();
+                    int prioritySearch = inputPrioritySearch.nextInt();
                     searchPatient(prioritySearch);
                     break;
                 case "4": sortPatients();
                     break;
-                case "5": System.out.print("\nClosing the program!");
+                case "5": System.out.print("\nClosing the program!\n\n");
                     return;
                 default:
                 	System.out.println("invalid input\n");
